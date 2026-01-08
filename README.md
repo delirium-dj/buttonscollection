@@ -1,8 +1,6 @@
 # ✨ Buttons Collection
 
-A curated collection of high-performance, modular animated buttons built with **Qwik**, **Tailwind CSS**, and **SASS**.
-
-This project showcases how to build complex UI animations using Qwik's resumability, ensuring zero initial JavaScript while delivering rich interactive experiences.
+A curated collection of high-performance, modular animated buttons built with **Qwik** & **Tailwind CSS**.
 
 ---
 
@@ -12,7 +10,6 @@ This project showcases how to build complex UI animations using Qwik's resumabil
 - **🎨 Rich Animations**: Includes hover effects ranging from SVG path drawing and rainbow "steam" borders to geometric "spin" transitions.
 - **🧩 Modular Architecture**: Each button (`B01`–`B10`) is a self-contained component with scoped styling.
 - **📦 Pre-configured SSG**: Includes a static site generator (SSG) configuration for lightning-fast deployments.
-- **🅰️ Local Typography**: Custom fonts (like _Cinzel_) are bundled locally to avoid external request latency and improve privacy.
 
 ---
 
@@ -48,7 +45,6 @@ This project showcases how to build complex UI animations using Qwik's resumabil
 - **Qwik**: The resumable web framework.
 - **Vite**: Ultra-fast build tool.
 - **Tailwind CSS**: Utility-first styling for layouts.
-- **SASS (Modern)**: Used for complex keyframe animations and variables.
 
 ---
 

@@ -52,22 +52,6 @@ export default defineConfig(({ command, mode }): UserConfig => {
         "Cache-Control": "public, max-age=0",
       },
     },
-    css: {
-      // Keep this FALSE to prevent the "Base64 Bloat" memory crash
-      devSourcemap: false,
-
-      preprocessorOptions: {
-        scss: {
-          // We cast to 'any' to silence the TypeScript error
-          api: 'modern-compiler',
-          silenceDeprecations: ['legacy-js-api'],
-        } as any, 
-      },
-    },
-    build: {
-      // Ensure production maps are also off
-      sourcemap: false,
-    },
     preview: {
       headers: {
         // Do cache the server response in preview (non-adapter production build)
