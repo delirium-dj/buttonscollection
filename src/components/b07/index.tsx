@@ -7,7 +7,7 @@ export const B07 = component$(() => {
   return (
     <div class="flex items-center justify-center p-4">
       <section class="buttons">
-        <button class="btn-b07">Hover Me</button>
+        <button class="button center">Hover Me</button>
       </section>
     </div>
   );
