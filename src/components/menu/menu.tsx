@@ -27,7 +27,7 @@ export const ButCol = component$(() => {
       label: "Buttons",
       href: "", // Parent link (optional)
       children: [
-        { label: "Class", href: "/classic" },
+        { label: "CSS", href: "/css" },
         { label: "Tailwind", href: "/tailwind" },
       ],
     },
