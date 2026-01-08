@@ -1,103 +1,91 @@
-# 🚀 Qwik + Tailwind3 "hamburger" Menu
+# ✨ Buttons Collection
+
+A curated collection of high-performance, modular animated buttons built with **Qwik**, **Tailwind CSS**, and **SASS**.
+
+This project showcases how to build complex UI animations using Qwik's resumability, ensuring zero initial JavaScript while delivering rich interactive experiences.
 
 ---
 
-## 🚀 QwikJS + Tailwind CSS 3 "hamburger" Menu
+## 🚀 Features
 
-We have moved away from the "checkbox hack" and nested CSS files into a Resumable Component architecture.
-🛠 The Tech Stack
+- **⚡ Instant-On**: Leveraging Qwik's resumability, code for button animations only loads when the user interacts with them.
+- **🎨 Rich Animations**: Includes hover effects ranging from SVG path drawing and rainbow "steam" borders to geometric "spin" transitions.
+- **🧩 Modular Architecture**: Each button (`B01`–`B10`) is a self-contained component with scoped styling.
+- **📦 Pre-configured SSG**: Includes a static site generator (SSG) configuration for lightning-fast deployments.
+- **🅰️ Local Typography**: Custom fonts (like _Cinzel_) are bundled locally to avoid external request latency and improve privacy.
 
-- QwikJS: A framework that delivers zero JavaScript to the browser initially. It only loads the code for the menu when you actually click it (this is called "Resumability").
-- Tailwind CSS 3: A utility-first CSS framework. Instead of writing a separate .css file with 50 lines, we apply small classes directly to the HTML.
+---
 
-## 📂 Code Breakdown
+## 📂 Project Structure
 
-### The Data Structure (menuItems)
+- `src/components/bXX/`: Standalone button components.
+  - `index.tsx`: Component logic and structure.
+  - `layout.css`/`layout.scss`: Scoped CSS/SASS for the button's specific animation.
+- `src/assets/fonts/`: Local font assets for specialized button aesthetics.
+- `src/routes/classic/`: The main showcase page aggregating all buttons in a responsive grid.
 
-Instead of hard-coding every link in HTML, we use a Javascript Array.
+---
 
-- Why? It makes the menu "DRY" (Don't Repeat Yourself). If you want to add a new link, you add one object to the array, and the UI updates automatically.
+## 🕹️ Button Styles Overview
 
-### Desktop Logic (Pure CSS)
+| Component | Style Description                                  | Tech Used              |
+| :-------- | :------------------------------------------------- | :--------------------- |
+| **B01**   | Classic typography with subtle corner transitions. | CSS / Scoped           |
+| **B02**   | Rainbow "Steam" animated gradient border.          | CSS / Linear Gradients |
+| **B03**   | Structural corner brackets with highlight.         | CSS                    |
+| **B04**   | SVG path "Draw" effect on hover.                   | SVG / Stroke Dash      |
+| **B05**   | Double-layer "Draw" border transition.             | SASS                   |
+| **B06**   | "Draw & Meet" border animation.                    | SASS                   |
+| **B07**   | Centered scaling "Center" border expansion.        | SASS / CSS             |
+| **B08**   | Circular "Spin" border rotation.                   | SASS                   |
+| **B09**   | Rounded "Spin" with circular geometry.             | SASS                   |
+| **B10**   | Thick "Fill & Spin" high-contrast effect.          | SASS                   |
 
-We use Tailwind's group feature to handle dropdowns on desktop.
+---
 
-- group: Placed on the parent container.
-- group-hover:opacity-100: Placed on the dropdown. It says: "When the parent is hovered, make me visible."
-- Benefit: This requires zero JavaScript to run on your desktop computer, making it incredibly fast.
+## 🛠️ Tech Stack
 
-### Mobile Logic (The Overlay)
+- **Qwik**: The resumable web framework.
+- **Vite**: Ultra-fast build tool.
+- **Tailwind CSS**: Utility-first styling for layouts.
+- **SASS (Modern)**: Used for complex keyframe animations and variables.
 
-On mobile, we switch to a Fixed Overlay that covers the screen.
-
-- fixed inset-0: Pins the menu to all four corners of the screen.
-- z-50: Ensures the menu sits "higher" than your page content (which usually lives at z-0).
-- bg-slate-900/90: The /90 creates that 90% transparency you requested.
-
-## 🧠 Core Concepts for Juniors
-
-### The **$** Sign (e.g., **component$**, **onClick$** etc. )
-
-In Qwik, the **$** is a signal to the "Optimizer." it tells Qwik: "Slice this code into a separate tiny file." This is why Qwik sites load so fast—the browser doesn't download the "Open Menu" logic until the user actually clicks the button.
-
-### Think of a Signal as a box that holds a value.
-
-- isMobileMenuOpen: A boolean (true or false).
-- expandedItem: Stores the name of the menu (e.g., "Products") currently opened on mobile.
-- Reacting: When the "box" value changes, Qwik automatically re-renders only the small part of the HTML that needs to change.
-
-### The Mobile Accordion logic
-
-We use max-height for the smooth slide-down effect:
-
-- Closed: max-h-0 and opacity-0.
-- Open: max-h-64 (or any height larger than the content) and opacity-100.
-- Transition: duration-300 makes the change take 0.3 seconds instead of happening instantly.
-
-## 🎨 How to Customize
-
-To change... -> Find this class...
-Transparency -> "bg-slate-900/90 (Change 90 to 50, 75, etc.)"
-Menu Blur -> backdrop-blur-md (Change to blur-sm or blur-xl)
-Desktop Color -> bg-slate-900
-Animation Speed -> duration-300 (300ms)
+---
 
 ## 🏃‍♂️ Getting Started
 
-Install dependencies:
+### 1. Install Dependencies
 
-```shell
+```bash
 pnpm install
 ```
 
-Start the development server:
+### 2. Run Development Server
 
-```shell
-pnpm dev
+```bash
+pnpm start
 ```
 
-Build for production:
+### 3. Build for Production (SSG)
 
-```shell
-pnpm build
+```bash
+pnpm run build
+```
+
+### 4. Preview Production Build
+
+```bash
+pnpm run preview
 ```
 
 ---
 
-## 📚 Documents
+## 📚 Learn More
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+- [Qwik Documentation](https://qwik.io/docs/)
+- [SASS Modern Compiler](https://sass-lang.com/documentation/js-api/interfaces/modernoptions/)
+- [Vite Config Guide](https://vitejs.dev/config/)
 
-### Static Site Generator (Node.js)
+---
 
-Be sure to configure your server to serve very long cache headers for the `build/**/*.js` files.
-
-Typically you'd set the `Cache-Control` header for those files to `public, max-age=31536000, immutable`.
-
-```shell
-pnpm build.server
-```
+_Handcrafted for performance and style._ 🚀

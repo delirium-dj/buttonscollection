@@ -1,5 +1,5 @@
-import { component$ } from '@builder.io/qwik';
-import { ButCol } from '../components/menu/menu';
+import { component$ } from "@builder.io/qwik";
+import { ButCol } from "../components/menu/menu";
 
 export default component$(() => {
   return (

@@ -21,7 +21,7 @@
 .btn::after,
 span::before,
 span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 8px;
   height: 8px;
@@ -56,11 +56,10 @@ span::after {
   border-right: 2px solid #ff0;
 }
 
-
 .btn:hover::before,
 .btn:hover::after,
 .btn:hover span::before,
-.btn:hover span::after  {
-  width: calc( 180px / 2);
-  height: calc( 50px / 2);
+.btn:hover span::after {
+  width: calc(180px / 2);
+  height: calc(50px / 2);
 }

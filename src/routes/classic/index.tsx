@@ -12,21 +12,21 @@ import { B09 } from "../../components/b09";
 import { B10 } from "../../components/b10";
 
 export default component$(() => {
-    return (
-        <>
-            <ButCol />
-            <main class="flex flex-col gap-4 w-full sm:grid sm:grid-cols-2 md:grid-cols-4">
-                <B05 />
-                <B06 />
-                <B07 />
-                <B08 />
-                <B09 />
-                <B10 />
-                <B01 />
-                <B02 />
-                <B03 />
-                <B04 />
-            </main>
-        </>
-    );
+  return (
+    <>
+      <ButCol />
+      <main class="flex w-full flex-col gap-4 sm:grid sm:grid-cols-2 md:grid-cols-4">
+        <B05 />
+        <B06 />
+        <B07 />
+        <B08 />
+        <B09 />
+        <B10 />
+        <B01 />
+        <B02 />
+        <B03 />
+        <B04 />
+      </main>
+    </>
+  );
 });

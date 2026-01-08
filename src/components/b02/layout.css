@@ -9,13 +9,27 @@
   font-size: 20px;
 }
 
-.block:before, .block:after {
-  content: '';
+.block:before,
+.block:after {
+  content: "";
   position: absolute;
   left: -2px;
   top: -2px;
-  background: linear-gradient(45deg, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, 
-    #0000ff, #00ff00,#ffff00, #ff0000, #fb0094);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094
+  );
   background-size: 400%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
@@ -41,9 +55,9 @@
 
 .noselect {
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

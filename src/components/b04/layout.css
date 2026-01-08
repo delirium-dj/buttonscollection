@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Cinzel';
-  src: url('../../assets/fonts/cinzel-400.ttf') format('truetype');
+  font-family: "Cinzel";
+  src: url("../../assets/fonts/cinzel-400.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cinzel';
-  src: url('../../assets/fonts/cinzel-700.ttf') format('truetype');
+  font-family: "Cinzel";
+  src: url("../../assets/fonts/cinzel-700.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 .svg-wrapper {
   position: relative;
   text-transform: uppercase;
-  width: 320px;  
+  width: 320px;
 }
 .shape {
   stroke-dasharray: 140 540;
@@ -26,10 +26,13 @@
   fill: transparent;
   stroke: #000;
   border-bottom: 5px solid black;
-  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  transition:
+    stroke-width 1s,
+    stroke-dashoffset 1s,
+    stroke-dasharray 1s;
 }
 .text {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 8px;

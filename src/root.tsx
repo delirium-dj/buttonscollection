@@ -24,7 +24,10 @@ export default component$(() => {
         )}
         <RouterHead />
       </head>
-      <body lang="en" class="max-w-7xl text-center text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl flex flex-col items-center mx-auto min-h-screen">
+      <body
+        lang="en"
+        class="mx-auto flex min-h-screen max-w-7xl flex-col items-center text-center text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl"
+      >
         <RouterOutlet />
       </body>
     </QwikCityProvider>

@@ -12,7 +12,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: "https://qwik-tailwind3-hamburger.netlify.app/",
+        origin: "https://yoursite.qwik.dev",
       }),
     ],
   };

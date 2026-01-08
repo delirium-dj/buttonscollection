@@ -1,5 +1,5 @@
-import { component$, useStylesScoped$ } from '@builder.io/qwik';
-import styles from './layout.css?inline'; // Note the '?inline'
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import styles from "./layout.css?inline"; // Note the '?inline'
 
 export const B02 = component$(() => {
   // This styles the component and scopes it automatically
@@ -7,9 +7,9 @@ export const B02 = component$(() => {
 
   return (
     <div class="flex items-center justify-center p-4">
-    <div class="block">
-      <span class="noselect text-white">Button</span>
-    </div>
+      <div class="block">
+        <span class="noselect text-white">Button</span>
+      </div>
     </div>
   );
 });
